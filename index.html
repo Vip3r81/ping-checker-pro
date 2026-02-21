@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Checker Pro | Professional Network Diagnostics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0078D4; 
+            --gradient-start: #0078D4;
+            --gradient-end: #00C6FF;
+            --dark-bg: #0f1115;
+            --light-bg: #f5f7f9;
+            --card-white: #ffffff;
+            --text-dark: #201f1e;
+            --text-muted: #605e5c;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* --- TOP DARK SECTION --- */
+        .hero-section {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 100px 20px 160px; /* Extra bottom padding for overlap */
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -2px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .tagline {
+            display: block;
+            font-size: 1rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 15px;
+        }
+
+        .hero-subtext {
+            color: #a0a0a0;
+            max-width: 600px;
+            margin: 25px auto 40px;
+            font-size: 1.2rem;
+        }
+
+        /* --- BUTTON & DOWNLOAD --- */
+        .btn-download {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 120, 212, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 120, 212, 0.5);
+        }
+
+        /* --- OVERLAPPING FEATURE SECTION --- */
+        .content-section {
+            margin-top: -100px; /* This pulls the cards up over the black */
+            padding-bottom: 80px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--card-white);
+            padding: 35px;
+            border-radius: 24px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Stronger shadow for depth */
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-blue);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: #111;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .security-alert {
+            background: #fff4ce;
+            border-left: 5px solid #ffb900;
+            padding: 20px;
+            margin: 40px 0;
+            font-size: 0.95rem;
+            border-radius: 12px;
+            color: #444;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero-section">
+    <div class="container">
+        <h1>Ping Checker Pro</h1>
+        <span class="tagline">v2.0 Gold Edition</span>
+        <p class="hero-subtext">
+            A professional diagnostic suite for network specialists. 
+            Monitor stability with interactive trend analysis and advanced logging.
+        </p>
+        
+        <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/v2.0/PingCheckerPro2.exe" class="btn-download">
+            Download for Windows
+        </a>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="features">
+            <div class="feature-card">
+                <h3>Interactive History</h3>
+                <p>Scrub through 12 hours of data. Zoom into specific spikes to identify failure patterns instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Professional Auditing</h3>
+                <p>Session-based logging with "Safety Stop" markers provides a clear, timestamped audit trail.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart Visuals</h3>
+                <p>Auto-scaling graph captures subtle latency jitters and hardware timeouts in a single, clean view.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Adaptive Layout</h3>
+                <p>Balanced dashboard with a draggable divider. Switch focus between trends and logs with one click.</p>
+            </div>
+        </div>
+
+        <div class="security-alert">
+            <strong>Administrator Note:</strong> To send raw ICMP packets, this application requires <strong>Elevated Privileges</strong>. Please "Run as Administrator" for full functionality.
+        </div>
+
+        <footer>
+            &copy; 2026 Ping Checker Pro. Stable Release 2.0.0-GOLD.<br>
+            Designed for stability, precision, and the modern IT professional.
+        </footer>
+    </div>
+</section>
+
+</body>
+</html>

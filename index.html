@@ -29,7 +29,7 @@
         .hero-section {
             background-color: var(--dark-bg);
             color: white;
-            padding: 100px 20px 160px; /* Extra bottom padding for overlap */
+            padding: 100px 20px 100px; /* Adjusted padding for image flow */
             text-align: center;
             position: relative;
         }
@@ -68,6 +68,28 @@
             font-size: 1.2rem;
         }
 
+        /* --- SCREENSHOT STYLING --- */
+        .screenshot-section {
+            background-color: var(--dark-bg);
+            text-align: center;
+            padding-bottom: 140px; /* Buffer for the cards to overlap */
+        }
+
+        .screenshot-frame {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            line-height: 0;
+            background: #1e1e1e;
+        }
+
+        .screenshot-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* --- BUTTON & DOWNLOAD --- */
         .btn-download {
             display: inline-block;
@@ -80,6 +102,7 @@
             border-radius: 12px;
             transition: all 0.3s ease;
             box-shadow: 0 10px 25px rgba(0, 120, 212, 0.3);
+            margin-bottom: 20px;
         }
 
         .btn-download:hover {
@@ -89,7 +112,7 @@
 
         /* --- OVERLAPPING FEATURE SECTION --- */
         .content-section {
-            margin-top: -100px; /* This pulls the cards up over the black */
+            margin-top: -100px; 
             padding-bottom: 80px;
             z-index: 10;
             position: relative;
@@ -106,7 +129,7 @@
             padding: 35px;
             border-radius: 24px;
             border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Stronger shadow for depth */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
         
@@ -144,6 +167,11 @@
             color: var(--text-muted);
             font-size: 0.85rem;
         }
+
+        @media (max-width: 768px) {
+            .features { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -160,6 +188,14 @@
         <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/v2.0/PingCheckerPro2.exe" class="btn-download">
             Download for Windows
         </a>
+    </div>
+</section>
+
+<section class="screenshot-section">
+    <div class="container">
+        <div class="screenshot-frame">
+            <img src="./pingcheckerpro.png" alt="Ping Checker Pro Gold Edition Interface">
+        </div>
     </div>
 </section>
 

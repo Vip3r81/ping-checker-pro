@@ -3,233 +3,579 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ping Checker Pro | Professional Network Diagnostics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Ping Checker Pro 2 | Professional Network Diagnostics & 7-Day Latency Monitoring</title>
+    <meta name="description" content="Ping Checker Pro 2 is a high-performance Windows network diagnostic application featuring multi-host parallel pinging, 7-day timeline scrubbing, custom packet sizes, keyboard navigation, and asynchronous logging.">
+    <meta name="keywords" content="Ping Checker Pro, Ping Checker Pro 2, network diagnostics, ping tool, latency monitoring, ICMP ping, packet loss, network stability, IT tools">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #0078D4; 
-            --gradient-start: #0078D4;
-            --gradient-end: #00C6FF;
-            --dark-bg: #0f1115;
-            --light-bg: #f5f7f9;
-            --card-white: #ffffff;
-            --text-dark: #201f1e;
-            --text-muted: #605e5c;
+            --primary-blue: #0078D4;
+            --primary-glow: #00A2FF;
+            --accent-cyan: #00C6FF;
+            --accent-green: #10B981;
+            --accent-amber: #F59E0B;
+            --dark-bg: #0B0F19;
+            --dark-card: #131B2E;
+            --dark-card-border: rgba(255, 255, 255, 0.08);
+            --light-bg: #F8FAFC;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --text-dark-muted: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark-bg);
+            color: #F1F5F9;
             margin: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* --- TOP DARK SECTION --- */
+        /* --- HERO SECTION --- */
         .hero-section {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 100px 20px 100px; /* Adjusted padding for image flow */
-            text-align: center;
             position: relative;
+            padding: 90px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 20%, rgba(0, 162, 255, 0.15) 0%, rgba(11, 15, 25, 1) 70%);
+            border-bottom: 1px solid var(--dark-card-border);
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1100px;
             margin: 0 auto;
-            position: relative;
+            padding: 0 20px;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 120, 212, 0.15);
+            border: 1px solid rgba(0, 198, 255, 0.3);
+            color: var(--accent-cyan);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(8px);
+        }
+
+        .badge-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            margin: 0;
+            margin: 0 0 16px;
             letter-spacing: -2px;
-            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            background: linear-gradient(135deg, #FFFFFF 30%, #38BDF8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: inline-block;
-        }
-
-        .tagline {
-            display: block;
-            font-size: 1rem;
-            color: var(--primary-blue);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-top: 15px;
+            line-height: 1.1;
         }
 
         .hero-subtext {
-            color: #a0a0a0;
-            max-width: 600px;
-            margin: 25px auto 40px;
-            font-size: 1.2rem;
+            color: var(--text-dark-muted);
+            max-width: 720px;
+            margin: 0 auto 36px;
+            font-size: 1.25rem;
+            font-weight: 400;
         }
 
-        /* --- SCREENSHOT STYLING --- */
+        .cta-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+            color: white;
+            padding: 16px 36px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 25px rgba(0, 120, 212, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 198, 255, 0.45);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #E2E8F0;
+            padding: 16px 28px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 1px solid var(--dark-card-border);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        /* --- SCREENSHOT SHOWCASE --- */
         .screenshot-section {
-            background-color: var(--dark-bg);
-            text-align: center;
-            padding-bottom: 140px; /* Buffer for the cards to overlap */
+            padding: 40px 0 80px;
+            background: #0B0F19;
         }
 
-        .screenshot-frame {
+        .window-frame {
+            background: #1E293B;
             border-radius: 16px;
+            border: 1px solid var(--dark-card-border);
+            box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 120, 212, 0.15);
             overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.1);
-            line-height: 0;
-            background: #1e1e1e;
         }
 
-        .screenshot-frame img {
+        .window-header {
+            background: #0F172A;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background-color: #EF4444; }
+        .dot-yellow { background-color: #F59E0B; }
+        .dot-green { background-color: #10B981; }
+
+        .window-title {
+            margin-left: 12px;
+            color: #94A3B8;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .screenshot-img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* --- BUTTON & DOWNLOAD --- */
-        .btn-download {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            color: white;
-            padding: 20px 50px;
-            font-size: 1.25rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0, 120, 212, 0.3);
-            margin-bottom: 20px;
+        /* --- FEATURE CARDS SECTION --- */
+        .features-section {
+            padding: 90px 0;
+            background: #0F172A;
+            border-top: 1px solid var(--dark-card-border);
         }
 
-        .btn-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0, 120, 212, 0.5);
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
         }
 
-        /* --- OVERLAPPING FEATURE SECTION --- */
-        .content-section {
-            margin-top: -100px; 
-            padding-bottom: 80px;
-            z-index: 10;
-            position: relative;
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #F8FAFC;
+            margin: 0 0 16px;
+            letter-spacing: -0.5px;
         }
 
-        .features {
+        .section-subtitle {
+            color: var(--text-dark-muted);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .grid-3 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
 
         .feature-card {
-            background: var(--card-white);
-            padding: 35px;
-            border-radius: 24px;
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            background: var(--dark-card);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid var(--dark-card-border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
         }
-        
+
         .feature-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-blue);
+            transform: translateY(-6px);
+            border-color: rgba(0, 162, 255, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 120, 212, 0.15);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(0, 120, 212, 0.15);
+            border: 1px solid rgba(0, 198, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
         }
 
         .feature-card h3 {
-            margin-top: 0;
-            color: #111;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
+            color: #F8FAFC;
+            margin: 0 0 12px;
         }
 
         .feature-card p {
-            color: var(--text-muted);
-            margin-bottom: 0;
-        }
-
-        .security-alert {
-            background: #fff4ce;
-            border-left: 5px solid #ffb900;
-            padding: 20px;
-            margin: 40px 0;
+            color: var(--text-dark-muted);
             font-size: 0.95rem;
-            border-radius: 12px;
-            color: #444;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin: 0;
+            line-height: 1.6;
         }
 
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: var(--text-muted);
+        /* --- KEYBOARD & CONTROL HIGHLIGHTS --- */
+        .controls-section {
+            padding: 80px 0;
+            background: #0B0F19;
+            border-top: 1px solid var(--dark-card-border);
+        }
+
+        .controls-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .shortcut-box {
+            background: var(--dark-card);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid var(--dark-card-border);
+        }
+
+        .shortcut-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .shortcut-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .shortcut-desc {
+            color: #CBD5E1;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .key {
+            background: #1E293B;
+            border: 1px solid #334155;
+            box-shadow: 0 2px 0 #0F172A;
+            color: #38BDF8;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 4px 10px;
+            border-radius: 6px;
             font-size: 0.85rem;
+            font-weight: 600;
         }
 
-        @media (max-width: 768px) {
-            .features { grid-template-columns: 1fr; }
-            h1 { font-size: 2.5rem; }
+        /* --- TECH SPECS TABLE --- */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .spec-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--dark-card-border);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .spec-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 6px;
+        }
+
+        .spec-label {
+            color: var(--text-dark-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* --- SECURITY / ADMIN ALERT --- */
+        .security-alert {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 20px 24px;
+            border-radius: 14px;
+            color: #FCD34D;
+            font-size: 0.95rem;
+            margin: 60px 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .security-alert strong {
+            color: #F59E0B;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            border-top: 1px solid var(--dark-card-border);
+            padding: 50px 0;
+            text-align: center;
+            color: var(--text-dark-muted);
+            font-size: 0.9rem;
+            background: #070A10;
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .controls-wrapper { grid-template-columns: 1fr; }
+            .specs-grid { grid-template-columns: repeat(2, 1fr); }
+            h1 { font-size: 2.75rem; }
         }
     </style>
 </head>
 <body>
 
+<!-- HERO SECTION -->
 <section class="hero-section">
     <div class="container">
-        <h1>Ping Checker Pro</h1>
-        <span class="tagline">Version 2</span>
+        <div class="badge-pill">
+            <span class="badge-pulse"></span>
+            Version 2.0 • High-Performance Diagnostic Tool
+        </div>
+        <h1>Ping Checker Pro 2</h1>
         <p class="hero-subtext">
-            A professional diagnostic suite for network specialists. 
-            Monitor stability with interactive trend analysis and advanced logging.
+            A professional Windows network monitoring application engineered for network specialists and IT engineers. Monitor up to 10 hosts concurrently with 7-day timeline scrubbing, custom ICMP payloads, and real-time audit logging.
         </p>
-        
-        <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/v2.0/PingCheckerPro2.exe" class="btn-download">
-            Download for Windows
-        </a>
+
+        <div class="cta-group">
+            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/v2.0/PingCheckerPro2.exe" class="btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PingCheckerPro2.exe
+            </a>
+            <a href="#features" class="btn-secondary">
+                Explore Features
+            </a>
+        </div>
     </div>
 </section>
 
+<!-- APP SCREENSHOT SHOWCASE -->
 <section class="screenshot-section">
     <div class="container">
-        <div class="screenshot-frame">
-            <img src="./pingcheckerpro.png" alt="Ping Checker Pro Gold Edition Interface">
+        <div class="window-frame">
+            <div class="window-header">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+                <span class="window-title">Ping Checker Pro 2 - [Live Dashboard]</span>
+            </div>
+            <img src="./PingCheckerPro.png" alt="Ping Checker Pro 2 Live Dashboard Interface" class="screenshot-img">
         </div>
     </div>
 </section>
 
-<section class="content-section">
+<!-- TECHNICAL SPECS BADGES -->
+<section style="background: #0B0F19; padding-bottom: 60px;">
     <div class="container">
-        <div class="features">
-            <div class="feature-card">
-                <h3>Interactive History</h3>
-                <p>Scrub through 12 hours of data. Zoom into specific spikes to identify failure patterns instantly.</p>
+        <div class="specs-grid">
+            <div class="spec-item">
+                <div class="spec-value">10 Hosts</div>
+                <div class="spec-label">Parallel ICMP Pinging</div>
             </div>
-            <div class="feature-card">
-                <h3>Professional Auditing</h3>
-                <p>Session-based logging with "Safety Stop" markers provides a clear, timestamped audit trail.</p>
+            <div class="spec-item">
+                <div class="spec-value">7 Days</div>
+                <div class="spec-label">In-Memory Timeline History</div>
             </div>
-            <div class="feature-card">
-                <h3>Smart Visuals</h3>
-                <p>Auto-scaling graph captures subtle latency jitters and hardware timeouts in a single, clean view.</p>
+            <div class="spec-item">
+                <div class="spec-value">32B - 1472B</div>
+                <div class="spec-label">Custom Packet Payload Testing</div>
             </div>
-            <div class="feature-card">
-                <h3>Adaptive Layout</h3>
-                <p>Balanced dashboard with a draggable divider. Switch focus between trends and logs with one click.</p>
+            <div class="spec-item">
+                <div class="spec-value">~1% CPU</div>
+                <div class="spec-label">Low Overhead Async Engine</div>
             </div>
         </div>
-
-        <div class="security-alert">
-            <strong>Administrator Note:</strong> To send raw ICMP packets, this application requires <strong>Elevated Privileges</strong>. Please "Run as Administrator" for full functionality.
-        </div>
-
-        <footer>
-            &copy; 2026 Ping Checker Pro. Stable Release 2.0.0-GOLD.<br>
-            Designed for stability, precision, and the modern IT professional.
-        </footer>
     </div>
 </section>
+
+<!-- CORE FEATURES GRID -->
+<section id="features" class="features-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Engineered for Network Stability & Precision</h2>
+            <p class="section-subtitle">Everything you need to diagnose packet drops, jitter spikes, and ISP degradation in one clean dashboard.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Multi-Target Engine</h3>
+                <p>Monitor up to 10 IP addresses or domain names simultaneously. Each host receives a distinct color-coded trendline with individual visibility toggles.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🕒</div>
+                <h3>7-Day History Scrubbing</h3>
+                <p>Retain up to 604,800 records in memory. Drag the full-width timeline slider to rewind and inspect historical latency spikes over hours or days.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⏸️</div>
+                <h3>Instant Auto-Pause & Jump</h3>
+                <p>Moving the timeline slider left instantly freezes the graph in <code>⏸ PAUSED</code> mode for deep analysis. Click <code>▶ JUMP TO LIVE</code> to snap back to real-time tracking.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⌨️</div>
+                <h3>Keyboard Precision Scrubbing</h3>
+                <p>Use <code>Left / Right Arrow</code> keys to nudge history point-by-point, or hold <code>Shift + Arrow</code> for 10x fast rewind/forward. Includes smart input protection while typing.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔎</div>
+                <h3>Multi-Level Zoom Window</h3>
+                <p>Switch between <code>1m</code>, <code>5m</code>, <code>10m</code>, <code>30m</code>, and <code>1h</code> time windows at any time. Right-click anywhere on the canvas to instantly reset the vertical scale.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📜</div>
+                <h3>Asynchronous Audit Logging</h3>
+                <p>Non-blocking worker thread streams clean, timestamped logs to <code>ping_log.txt</code> without UI stutters. Features dual timestamp headers (<code>History Since</code> & <code>Last Start</code>).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEYBOARD & QUICK CONTROLS -->
+<section class="controls-section">
+    <div class="container">
+        <div class="controls-wrapper">
+            <div>
+                <h2 class="section-title">Timeline Scrubbing Controls</h2>
+                <p style="color: var(--text-dark-muted); font-size: 1.05rem;">
+                    Quickly navigate complex multi-day packet loss logs using keyboard shortcuts or mouse gestures without interrupting background ping collection.
+                </p>
+                <div class="security-alert" style="margin: 30px 0 0;">
+                    <span>🛡️</span>
+                    <div>
+                        <strong>Administrator Privilege Required:</strong><br>
+                        Sending raw ICMP socket packets on Windows requires Elevated Privileges. Always right-click and select <strong>"Run as Administrator"</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut-box">
+                <h3 style="margin-top: 0; color: #F8FAFC; font-size: 1.2rem;">Keyboard & Mouse Shortcuts</h3>
+                <div class="shortcut-list">
+                    <div class="shortcut-item">
+                        <span class="shortcut-desc">Nudge 1 point back / forward</span>
+                        <div><span class="key">← Left</span> <span class="key">Right →</span></div>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="shortcut-desc">Fast Rewind / Forward (10x)</span>
+                        <div><span class="key">Shift + ←</span> <span class="key">Shift + →</span></div>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="shortcut-desc">Canvas Click & Drag Panning</span>
+                        <div><span class="key">Left Click + Drag</span></div>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="shortcut-desc">Reset Vertical Y-Axis Zoom</span>
+                        <div><span class="key">Right Click</span></div>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="shortcut-desc">Resume Live Monitoring</span>
+                        <div><span class="key">▶ JUMP TO LIVE</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p style="margin-bottom: 8px;">
+            &copy; 2026 <strong>Ping Checker Pro 2</strong>. Stable Release 2.0.
+        </p>
+        <p style="margin: 0; font-size: 0.85rem;">
+            Designed for stability, precision, and modern IT infrastructure diagnostics. 
+            | <a href="https://github.com/Vip3r81/ping-checker-pro" target="_blank" rel="noopener">GitHub Project Repository</a>
+        </p>
+    </div>
+</footer>
 
 </body>
 </html>

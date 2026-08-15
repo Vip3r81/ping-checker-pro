@@ -4,42 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Ping Checker Pro 2 | Free Windows Network Latency & Packet Loss Monitor</title>
-    <meta name="description" content="Ping Checker Pro 2 is a professional Windows network diagnostic tool featuring multi-host parallel ICMP pinging, 7-day timeline scrubbing, custom packet payload sizes, keyboard shortcuts, and background logging.">
-    <meta name="keywords" content="Ping Checker Pro, Ping Checker Pro 2, ping tool, network diagnostics, latency monitor, ICMP ping tool, packet loss checker, Windows ping utility, IT network tool">
-    <meta name="author" content="Ping Checker Pro">
+    <title>Network Tools | Ping Checker Pro 2 & IP Scanner Pro for Windows</title>
+    <meta name="description" content="Download professional Windows network tools: Ping Checker Pro 2 for 7-day ICMP latency monitoring & graph timeline scrubbing, and IP Scanner Pro for multi-threaded subnet device discovery & MAC vendor resolution.">
+    <meta name="keywords" content="Ping Checker Pro 2, IP Scanner Pro, network tools, IP scanner, subnet scanner, ICMP ping, packet loss monitor, MAC address lookup, vendor detection, IT diagnostics">
+    <meta name="author" content="Network Tools">
     <link rel="icon" type="image/x-icon" href="./app_icon.ico">
     <link rel="canonical" href="https://vip3r81.github.io/ping-checker-pro/">
 
-    <!-- Open Graph / Social Sharing (Facebook, LinkedIn, Discord) -->
+    <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Ping Checker Pro 2 | Professional Network Diagnostics & Latency Monitor">
-    <meta property="og:description" content="Monitor up to 10 hosts concurrently with 7-day history scrubbing, custom packet payload sizes, keyboard shortcuts, and real-time audit logging.">
+    <meta property="og:title" content="Network Tools | Ping Checker Pro 2 & IP Scanner Pro">
+    <meta property="og:description" content="Two essential Windows utilities for network administrators: 7-day latency monitoring with Ping Checker Pro 2, and multi-threaded subnet discovery with IP Scanner Pro.">
     <meta property="og:image" content="./PingCheckerPro.png">
     <meta property="og:url" content="https://vip3r81.github.io/ping-checker-pro/">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ping Checker Pro 2 | Free Windows Network Diagnostic Tool">
-    <meta name="twitter:description" content="Multi-host ICMP latency monitoring, 7-day timeline history scrubbing, and real-time logging for IT professionals.">
+    <meta name="twitter:title" content="Network Tools | Free Windows Network Diagnostic Suite">
+    <meta name="twitter:description" content="Professional ICMP latency tracking and multi-threaded IP subnet discovery tools for Windows.">
     <meta name="twitter:image" content="./PingCheckerPro.png">
 
-    <!-- Schema.org Structured Data for Google Software Snippet -->
+    <!-- Schema.org Structured Data for Multi-App Suite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Ping Checker Pro 2",
-      "operatingSystem": "Windows 10, Windows 11",
-      "applicationCategory": "UtilitiesApplication",
-      "softwareVersion": "2.0",
-      "description": "Professional network diagnostic tool featuring multi-host parallel pinging, 7-day timeline history scrubbing, custom packet sizes, keyboard navigation, and asynchronous logging.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "downloadUrl": "https://github.com/Vip3r81/ping-checker-pro/releases/download/v2.0/PingCheckerPro2.exe"
+      "@type": "ItemList",
+      "name": "Windows Network Tools Suite",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Ping Checker Pro 2",
+            "operatingSystem": "Windows 10, Windows 11",
+            "applicationCategory": "UtilitiesApplication",
+            "softwareVersion": "2.0",
+            "description": "Professional latency monitoring tool featuring 10-host parallel pinging, 7-day timeline scrubbing, custom packet sizes, keyboard navigation, and asynchronous logging.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "downloadUrl": "https://github.com/Vip3r81/ping-checker-pro/releases/download/PingCheckerPro2/PingCheckerPro2.exe"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "IP Scanner Pro",
+            "operatingSystem": "Windows 10, Windows 11",
+            "applicationCategory": "UtilitiesApplication",
+            "softwareVersion": "1.0",
+            "description": "Multi-threaded local IP and subnet scanner featuring Win32 SendARP MAC resolution, IEEE OUI vendor identification, port scanning, and report exporting.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "downloadUrl": "https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe"
+          }
+        }
+      ]
     }
     </script>
 
@@ -52,41 +72,100 @@
             --accent-cyan: #00C6FF;
             --accent-green: #10B981;
             --accent-amber: #F59E0B;
+            --accent-purple: #8B5CF6;
             --dark-bg: #0B0F19;
             --dark-card: #131B2E;
             --dark-card-border: rgba(255, 255, 255, 0.08);
             --light-bg: #F8FAFC;
-            --text-main: #0F172A;
-            --text-muted: #64748B;
-            --text-dark-muted: #94A3B8;
+            --text-main: #F1F5F9;
+            --text-muted: #94A3B8;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--dark-bg);
-            color: #F1F5F9;
+            color: var(--text-main);
             margin: 0;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
+        /* --- STICKY NAVBAR --- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--dark-card-border);
+            padding: 16px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover { color: white; }
+
         /* --- HERO SECTION --- */
         .hero-section {
             position: relative;
-            padding: 90px 20px 60px;
+            padding: 90px 24px 70px;
             text-align: center;
-            background: radial-gradient(circle at 50% 20%, rgba(0, 162, 255, 0.15) 0%, rgba(11, 15, 25, 1) 70%);
+            background: radial-gradient(circle at 50% 15%, rgba(0, 162, 255, 0.18) 0%, rgba(11, 15, 25, 1) 75%);
             border-bottom: 1px solid var(--dark-card-border);
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         .badge-pill {
@@ -96,7 +175,7 @@
             background: rgba(0, 120, 212, 0.15);
             border: 1px solid rgba(0, 198, 255, 0.3);
             color: var(--accent-cyan);
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 9999px;
             font-size: 0.85rem;
             font-weight: 600;
@@ -121,21 +200,21 @@
         }
 
         h1 {
-            font-size: 3.8rem;
+            font-size: 3.6rem;
             font-weight: 800;
-            margin: 0 0 16px;
+            margin: 0 0 18px;
             letter-spacing: -2px;
-            background: linear-gradient(135deg, #FFFFFF 30%, #38BDF8 100%);
+            background: linear-gradient(135deg, #FFFFFF 20%, #38BDF8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.1;
+            line-height: 1.15;
         }
 
         .hero-subtext {
-            color: var(--text-dark-muted);
-            max-width: 720px;
-            margin: 0 auto 36px;
-            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 780px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
             font-weight: 400;
         }
 
@@ -145,7 +224,7 @@
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .btn-primary {
@@ -154,8 +233,8 @@
             gap: 10px;
             background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
             color: white;
-            padding: 16px 36px;
-            font-size: 1.1rem;
+            padding: 16px 32px;
+            font-size: 1.05rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 12px;
@@ -168,31 +247,74 @@
             box-shadow: 0 15px 35px rgba(0, 198, 255, 0.45);
         }
 
-        .btn-secondary {
+        .btn-purple {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #E2E8F0;
-            padding: 16px 28px;
+            gap: 10px;
+            background: linear-gradient(135deg, #7C3AED, #A855F7);
+            color: white;
+            padding: 16px 32px;
             font-size: 1.05rem;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 12px;
-            border: 1px solid var(--dark-card-border);
             transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
         }
 
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
+        .btn-purple:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(168, 85, 247, 0.45);
+        }
+
+        /* --- TOOL SHOWCASE SECTION --- */
+        .tool-showcase {
+            padding: 90px 0;
+            border-bottom: 1px solid var(--dark-card-border);
+        }
+
+        .tool-showcase.alt-bg {
+            background: #0F172A;
+        }
+
+        .tool-header-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .badge-cyan { background: rgba(0, 198, 255, 0.15); color: var(--accent-cyan); border: 1px solid rgba(0, 198, 255, 0.3); }
+        .badge-purple { background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+
+        .tool-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin: 0 0 16px;
             color: white;
+            letter-spacing: -1px;
         }
 
-        /* --- SCREENSHOT SHOWCASE --- */
-        .screenshot-section {
-            padding: 40px 0 80px;
-            background: #0B0F19;
+        .tool-desc {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 750px;
+            margin-bottom: 40px;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .showcase-grid.reverse {
+            grid-template-columns: 1fr 1.2fr;
         }
 
         .window-frame {
@@ -231,173 +353,163 @@
             display: block;
         }
 
-        /* --- FEATURE CARDS SECTION --- */
-        .features-section {
+        .icon-box-display {
+            background: var(--dark-card);
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+            border: 1px solid var(--dark-card-border);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon-box-display img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(124, 58, 237, 0.4));
+        }
+
+        .feature-bullets {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bullet-item {
+            background: var(--dark-card);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--dark-card-border);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .bullet-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .bullet-title {
+            font-weight: 700;
+            color: white;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .bullet-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* --- WORKFLOW INTEGRATION --- */
+        .workflow-section {
             padding: 90px 0;
+            background: #0B0F19;
+            text-align: center;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .workflow-card {
+            background: var(--dark-card);
+            padding: 36px;
+            border-radius: 20px;
+            border: 1px solid var(--dark-card-border);
+            text-align: left;
+        }
+
+        .step-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            background: rgba(0, 198, 255, 0.15);
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .arrow-divider {
+            font-size: 2rem;
+            color: var(--text-muted);
+        }
+
+        /* --- COMPARISON TABLE --- */
+        .comparison-section {
+            padding: 80px 0;
             background: #0F172A;
             border-top: 1px solid var(--dark-card-border);
         }
 
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-
-        .section-title {
-            font-size: 2.25rem;
-            font-weight: 800;
-            color: #F8FAFC;
-            margin: 0 0 16px;
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            color: var(--text-dark-muted);
-            font-size: 1.1rem;
-            margin: 0;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .feature-card {
-            background: var(--dark-card);
-            padding: 32px;
-            border-radius: 16px;
-            border: 1px solid var(--dark-card-border);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(0, 162, 255, 0.4);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 120, 212, 0.15);
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(0, 120, 212, 0.15);
-            border: 1px solid rgba(0, 198, 255, 0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--accent-cyan);
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #F8FAFC;
-            margin: 0 0 12px;
-        }
-
-        .feature-card p {
-            color: var(--text-dark-muted);
-            font-size: 0.95rem;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* --- KEYBOARD & CONTROL HIGHLIGHTS --- */
-        .controls-section {
-            padding: 80px 0;
-            background: #0B0F19;
-            border-top: 1px solid var(--dark-card-border);
-        }
-
-        .controls-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .shortcut-box {
+        .table-wrapper {
             background: var(--dark-card);
             border-radius: 16px;
-            padding: 32px;
             border: 1px solid var(--dark-card-border);
-        }
-
-        .shortcut-list {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .shortcut-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .shortcut-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .shortcut-desc {
-            color: #CBD5E1;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .key {
-            background: #1E293B;
-            border: 1px solid #334155;
-            box-shadow: 0 2px 0 #0F172A;
-            color: #38BDF8;
-            font-family: 'JetBrains Mono', monospace;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* --- TECH SPECS TABLE --- */
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
+            overflow: hidden;
             margin-top: 40px;
         }
 
-        .spec-item {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 18px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+        }
+
+        th {
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--dark-card-border);
-            padding: 20px;
-            border-radius: 12px;
+            color: white;
+            font-weight: 700;
+        }
+
+        td { color: var(--text-muted); }
+        td strong { color: white; }
+
+        /* --- DOWNLOAD CENTER & ADMIN ALERT --- */
+        .download-center {
+            padding: 90px 0;
+            background: #0B0F19;
             text-align: center;
         }
 
-        .spec-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--accent-cyan);
-            font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 6px;
+        .download-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .spec-label {
-            color: var(--text-dark-muted);
-            font-size: 0.85rem;
-            font-weight: 500;
+        .download-card {
+            background: var(--dark-card);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--dark-card-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
         }
 
-        /* --- SECURITY / ADMIN ALERT --- */
+        .download-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 162, 255, 0.4);
+        }
+
         .security-alert {
             background: rgba(245, 158, 11, 0.1);
             border: 1px solid rgba(245, 158, 11, 0.3);
@@ -405,14 +517,11 @@
             border-radius: 14px;
             color: #FCD34D;
             font-size: 0.95rem;
-            margin: 60px 0 40px;
+            margin: 60px 0 0;
             display: flex;
             align-items: center;
             gap: 14px;
-        }
-
-        .security-alert strong {
-            color: #F59E0B;
+            text-align: left;
         }
 
         /* --- FOOTER --- */
@@ -420,183 +529,308 @@
             border-top: 1px solid var(--dark-card-border);
             padding: 50px 0;
             text-align: center;
-            color: var(--text-dark-muted);
+            color: var(--text-muted);
             font-size: 0.9rem;
             background: #070A10;
         }
 
-        footer a {
-            color: var(--accent-cyan);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+        footer a { color: var(--accent-cyan); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
 
         @media (max-width: 900px) {
-            .grid-3 { grid-template-columns: 1fr; }
-            .controls-wrapper { grid-template-columns: 1fr; }
-            .specs-grid { grid-template-columns: repeat(2, 1fr); }
-            h1 { font-size: 2.75rem; }
+            .showcase-grid, .showcase-grid.reverse { grid-template-columns: 1fr; }
+            .workflow-grid { grid-template-columns: 1fr; }
+            .arrow-divider { transform: rotate(90deg); margin: 10px 0; }
+            .download-cards { grid-template-columns: 1fr; }
+            h1 { font-size: 2.6rem; }
         }
     </style>
 </head>
 <body>
+
+<!-- STICKY NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="brand-logo">
+            <div class="brand-icon">⚡</div>
+            Network Tools
+        </a>
+        <ul class="nav-links">
+            <li><a href="#ping-checker">Ping Checker Pro 2</a></li>
+            <li><a href="#ip-scanner">IP Scanner Pro</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#comparison">Specs</a></li>
+            <li><a href="#download" style="color: var(--accent-cyan); font-weight: 700;">Download</a></li>
+        </ul>
+    </div>
+</nav>
 
 <!-- HERO SECTION -->
 <section class="hero-section">
     <div class="container">
         <div class="badge-pill">
             <span class="badge-pulse"></span>
-            Version 2.0 • High-Performance Diagnostic Tool
+            Network Utilities Suite • Version 2.0
         </div>
-        <h1>Ping Checker Pro 2</h1>
+        <h1>Windows Network Diagnostics & Discovery Tools</h1>
         <p class="hero-subtext">
-            A professional Windows network monitoring application engineered for network specialists and IT engineers. Monitor up to 10 hosts concurrently with 7-day timeline scrubbing, custom ICMP payloads, and real-time audit logging.
+            Two standalone, high-performance Windows applications designed for system administrators, IT specialists, and network engineers. Monitor latency stability with <strong>Ping Checker Pro 2</strong> and discover local subnet infrastructure with <strong>IP Scanner Pro</strong>.
         </p>
 
         <div class="cta-group">
-            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/v2.0/PingCheckerPro2.exe" class="btn-primary">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download PingCheckerPro2.exe
+            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/PingCheckerPro2/PingCheckerPro2.exe" class="btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Ping Checker Pro 2
             </a>
-            <a href="#features" class="btn-secondary">
-                Explore Features
+            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe" class="btn-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download IP Scanner Pro
             </a>
         </div>
     </div>
 </section>
 
-<!-- APP SCREENSHOT SHOWCASE -->
-<section class="screenshot-section">
+<!-- TOOL 1: PING CHECKER PRO 2 -->
+<section id="ping-checker" class="tool-showcase">
     <div class="container">
-        <div class="window-frame">
-            <div class="window-header">
-                <div class="dot dot-red"></div>
-                <div class="dot dot-yellow"></div>
-                <div class="dot dot-green"></div>
-                <span class="window-title">Ping Checker Pro 2 - [Live Dashboard]</span>
-            </div>
-            <img src="./pingcheckerpro.png" alt="Ping Checker Pro 2 real-time network diagnostic dashboard interface showing multi-host latency trend graph, live logging pane, and timeline slider" class="screenshot-img">
-        </div>
-    </div>
-</section>
+        <span class="tool-header-badge badge-cyan">Tool 1 • Latency & Stability Monitor</span>
+        <h2 class="tool-title">Ping Checker Pro 2</h2>
+        <p class="tool-desc">
+            Continuous multi-target ICMP latency graphing with 7-day timeline scrubbing, custom packet payload sizes (32B – 1472B MTU), keyboard shortcuts, and asynchronous audit logging.
+        </p>
 
-<!-- TECHNICAL SPECS BADGES -->
-<section style="background: #0B0F19; padding-bottom: 60px;">
-    <div class="container">
-        <div class="specs-grid">
-            <div class="spec-item">
-                <div class="spec-value">10 Hosts</div>
-                <div class="spec-label">Parallel ICMP Pinging</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-value">7 Days</div>
-                <div class="spec-label">In-Memory Timeline History</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-value">32B - 1472B</div>
-                <div class="spec-label">Custom Packet Payload Testing</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-value">~1% CPU</div>
-                <div class="spec-label">Low Overhead Async Engine</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CORE FEATURES GRID -->
-<section id="features" class="features-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Engineered for Network Stability & Precision</h2>
-            <p class="section-subtitle">Everything you need to diagnose packet drops, jitter spikes, and ISP degradation in one clean dashboard.</p>
-        </div>
-
-        <div class="grid-3">
-            <div class="feature-card">
-                <div class="feature-icon">🌐</div>
-                <h3>Multi-Target Engine</h3>
-                <p>Monitor up to 10 IP addresses or domain names simultaneously. Each host receives a distinct color-coded trendline with individual visibility toggles.</p>
+        <div class="showcase-grid">
+            <div class="window-frame">
+                <div class="window-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <span class="window-title">Ping Checker Pro 2 - [Live Dashboard]</span>
+                </div>
+                <img src="./PingCheckerPro.png" alt="Ping Checker Pro 2 Interface" class="screenshot-img">
             </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">🕒</div>
-                <h3>7-Day History Scrubbing</h3>
-                <p>Retain up to 604,800 records in memory. Drag the full-width timeline slider to rewind and inspect historical latency spikes over hours or days.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">⏸️</div>
-                <h3>Instant Auto-Pause & Jump</h3>
-                <p>Moving the timeline slider left instantly freezes the graph in <code>⏸ PAUSED</code> mode for deep analysis. Click <code>▶ JUMP TO LIVE</code> to snap back to real-time tracking.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">⌨️</div>
-                <h3>Keyboard Precision Scrubbing</h3>
-                <p>Use <code>Left / Right Arrow</code> keys to nudge history point-by-point, or hold <code>Shift + Arrow</code> for 10x fast rewind/forward. Includes smart input protection while typing.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🔎</div>
-                <h3>Multi-Level Zoom Window</h3>
-                <p>Switch between <code>1m</code>, <code>5m</code>, <code>10m</code>, <code>30m</code>, and <code>1h</code> time windows at any time. Right-click anywhere on the canvas to instantly reset the vertical scale.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">📜</div>
-                <h3>Asynchronous Audit Logging</h3>
-                <p>Non-blocking worker thread streams clean, timestamped logs to <code>ping_log.txt</code> without UI stutters. Features dual timestamp headers (<code>History Since</code> & <code>Last Start</code>).</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- KEYBOARD & QUICK CONTROLS -->
-<section class="controls-section">
-    <div class="container">
-        <div class="controls-wrapper">
-            <div>
-                <h2 class="section-title">Timeline Scrubbing Controls</h2>
-                <p style="color: var(--text-dark-muted); font-size: 1.05rem;">
-                    Quickly navigate complex multi-day packet loss logs using keyboard shortcuts or mouse gestures without interrupting background ping collection.
-                </p>
-                <div class="security-alert" style="margin: 30px 0 0;">
-                    <span>🛡️</span>
+            <div class="feature-bullets">
+                <div class="bullet-item">
+                    <div class="bullet-icon">🌐</div>
                     <div>
-                        <strong>Administrator Privilege Required:</strong><br>
-                        Sending raw ICMP socket packets on Windows requires Elevated Privileges. Always right-click and select <strong>"Run as Administrator"</strong>.
+                        <div class="bullet-title">10-Host Concurrent Monitoring</div>
+                        <p class="bullet-text">Track up to 10 IP addresses or domain names simultaneously with distinct color-coded trendlines and individual host visibility toggles.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">🕒</div>
+                    <div>
+                        <div class="bullet-title">7-Day Timeline Scrubbing</div>
+                        <p class="bullet-text">Store up to 604,800 records in memory. Drag the full-width timeline slider left to enter <code>⏸ PAUSED</code> mode and inspect historical spikes.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">⌨️</div>
+                    <div>
+                        <div class="bullet-title">Keyboard Precision Navigation</div>
+                        <p class="bullet-text">Nudge timeline point-by-point with <code>Left/Right Arrow</code> keys or hold <code>Shift + Arrow</code> for 10x fast rewind/forward.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">📜</div>
+                    <div>
+                        <div class="bullet-title">Asynchronous Audit Logging</div>
+                        <p class="bullet-text">Non-blocking background thread writes timestamped logs to <code>ping_log.txt</code> without UI lag. Features dual timestamps (<code>History Since</code> & <code>Last Start</code>).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TOOL 2: IP SCANNER PRO -->
+<section id="ip-scanner" class="tool-showcase alt-bg">
+    <div class="container">
+        <span class="tool-header-badge badge-purple">Tool 2 • Subnet & Device Discovery</span>
+        <h2 class="tool-title">IP Scanner Pro</h2>
+        <p class="tool-desc">
+            Fast multi-threaded network scanner that parses local subnets, resolves MAC addresses & IEEE OUI hardware vendors, detects open ports/services, and exports audit reports.
+        </p>
+
+        <div class="showcase-grid reverse">
+            <div class="feature-bullets">
+                <div class="bullet-item">
+                    <div class="bullet-icon">🔍</div>
+                    <div>
+                        <div class="bullet-title">Subnet & IP Range Scanning</div>
+                        <p class="bullet-text">Auto-detects active local subnet ranges (e.g. <code>192.168.1.0/24</code>, <code>192.168.88.1-254</code>) or custom IP lists with high-speed parallel worker threads.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">🏷️</div>
+                    <div>
+                        <div class="bullet-title">MAC & Hardware Vendor Resolution</div>
+                        <p class="bullet-text">Uses Win32 SendARP API and ARP cache lookups to resolve MAC addresses and identify manufacturers (Apple, Cisco, Ubiquiti, Synology, Raspberry Pi, etc.).</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">🔌</div>
+                    <div>
+                        <div class="bullet-title">Port & Service Fingerprinting</div>
+                        <p class="bullet-text">Scans common operational ports (HTTP, HTTPS, SSH, RDP, SMB, VNC, SNMP, Printer) and automatically categorizes active network hardware.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">📋</div>
+                    <div>
+                        <div class="bullet-title">Quick Actions & Exporting</div>
+                        <p class="bullet-text">Launch 1-click web connections, SSH sessions, or RDP directly from discovered IP rows. Export complete inventory tables to CSV or JSON.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="shortcut-box">
-                <h3 style="margin-top: 0; color: #F8FAFC; font-size: 1.2rem;">Keyboard & Mouse Shortcuts</h3>
-                <div class="shortcut-list">
-                    <div class="shortcut-item">
-                        <span class="shortcut-desc">Nudge 1 point back / forward</span>
-                        <div><span class="key">← Left</span> <span class="key">Right →</span></div>
-                    </div>
-                    <div class="shortcut-item">
-                        <span class="shortcut-desc">Fast Rewind / Forward (10x)</span>
-                        <div><span class="key">Shift + ←</span> <span class="key">Shift + →</span></div>
-                    </div>
-                    <div class="shortcut-item">
-                        <span class="shortcut-desc">Canvas Click & Drag Panning</span>
-                        <div><span class="key">Left Click + Drag</span></div>
-                    </div>
-                    <div class="shortcut-item">
-                        <span class="shortcut-desc">Reset Vertical Y-Axis Zoom</span>
-                        <div><span class="key">Right Click</span></div>
-                    </div>
-                    <div class="shortcut-item">
-                        <span class="shortcut-desc">Resume Live Monitoring</span>
-                        <div><span class="key">▶ JUMP TO LIVE</span></div>
-                    </div>
+            <div class="window-frame">
+                <div class="window-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <span class="window-title">IP Scanner Pro - [Subnet & Asset Auditor]</span>
                 </div>
+                <img src="./ipscanner.png" alt="IP Scanner Pro network discovery interface showing active IP table and host inspector pane" class="screenshot-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WORKFLOW INTEGRATION -->
+<section id="workflow" class="workflow-section">
+    <div class="container">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: white; margin: 0 0 12px;">Better Together: Integrated IT Workflow</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px;">
+            Combine both tools for complete network discovery, baseline auditing, and continuous quality monitoring.
+        </p>
+
+        <div class="workflow-grid">
+            <div class="workflow-card">
+                <span class="step-number">STEP 1 • DISCOVER</span>
+                <h3 style="color: white; margin: 0 0 10px; font-size: 1.3rem;">Scan Subnet with IP Scanner Pro</h3>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;">
+                    Run a quick subnet scan to discover all online devices, identify rogue IPs, query MAC vendors, and uncover open management ports.
+                </p>
+            </div>
+
+            <div class="arrow-divider">➔</div>
+
+            <div class="workflow-card">
+                <span class="step-number">STEP 2 • MONITOR</span>
+                <h3 style="color: white; margin: 0 0 10px; font-size: 1.3rem;">Track Quality with Ping Checker Pro 2</h3>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;">
+                    Add critical infrastructure IPs (routers, access points, gateways, servers) to Ping Checker Pro 2 for continuous 7-day latency tracking and drop alerts.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARISON MATRIX -->
+<section id="comparison" class="comparison-section">
+    <div class="container">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: white; margin: 0 0 12px; text-align: center;">Tool Specifications Matrix</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 20px; text-align: center;">
+            Compare technical capabilities and core features across both diagnostic tools.
+        </p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Capability / Feature</th>
+                        <th>Ping Checker Pro 2</th>
+                        <th>IP Scanner Pro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Primary Function</strong></td>
+                        <td>Continuous ICMP Latency & Drop Monitoring</td>
+                        <td>Multi-Threaded Subnet & Device Discovery</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Target Capacity</strong></td>
+                        <td>Up to 10 Hosts (Parallel Graphing)</td>
+                        <td>Full Subnets (e.g. /24, 254+ IPs)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timeline History</strong></td>
+                        <td>7 Days (604,800 Points In-Memory)</td>
+                        <td>Snapshot Scan Results Table</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware Vendor Lookup</strong></td>
+                        <td>N/A</td>
+                        <td>Win32 SendARP + IEEE OUI Vendor Database</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Port Scanning</strong></td>
+                        <td>N/A</td>
+                        <td>Common Ports (HTTP, HTTPS, SSH, SMB, RDP, VNC)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Controls & Scrubbing</strong></td>
+                        <td>Full-Width Slider, Left/Right Arrow Keys</td>
+                        <td>Filter Search Bar, Column Sorting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Export Formats</strong></td>
+                        <td>Text Audit Log (<code>ping_log.txt</code>)</td>
+                        <td>CSV, JSON, HTML Reports</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Executable Bundle</strong></td>
+                        <td>Standalone Windows <code>.exe</code></td>
+                        <td>Standalone Windows <code>.exe</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- DOWNLOAD CENTER & SECURITY ALERT -->
+<section id="download" class="download-center">
+    <div class="container">
+        <h2 style="font-size: 2.4rem; font-weight: 800; color: white; margin: 0 0 12px;">Download Center</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+            Get the latest stable 2.0 standalone executables for Windows 10 and Windows 11.
+        </p>
+
+        <div class="download-cards">
+            <div class="download-card">
+                <div style="font-size: 2.5rem; margin-bottom: 12px;">⚡</div>
+                <h3 style="color: white; font-size: 1.5rem; margin: 0 0 8px;">Ping Checker Pro 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Version 2.0.0 • Latency Monitoring</p>
+                <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/PingCheckerPro2/PingCheckerPro2.exe" class="btn-primary" style="width: 100%; justify-content: center;">
+                    Download PingCheckerPro2.exe
+                </a>
+            </div>
+
+            <div class="download-card">
+                <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
+                <h3 style="color: white; font-size: 1.5rem; margin: 0 0 8px;">IP Scanner Pro</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Version 1.0.0 • Subnet Discovery</p>
+                <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe" class="btn-purple" style="width: 100%; justify-content: center;">
+                    Download IPScanner.exe
+                </a>
+            </div>
+        </div>
+
+        <div class="security-alert">
+            <span style="font-size: 1.5rem;">🛡️</span>
+            <div>
+                <strong>Administrator Privilege Notice:</strong><br>
+                Both applications require Elevated Privileges to send raw ICMP socket packets and issue Win32 SendARP queries. Please right-click the executable files and select <strong>"Run as Administrator"</strong> for full functionality.
             </div>
         </div>
     </div>
@@ -606,7 +840,7 @@
 <footer>
     <div class="container">
         <p style="margin-bottom: 8px;">
-            &copy; 2026 <strong>Ping Checker Pro 2</strong>. Stable Release 2.0.
+            &copy; 2026 <strong>Network Tools</strong>. Stable Release Suite 2.0.
         </p>
         <p style="margin: 0; font-size: 0.85rem;">
             Designed for stability, precision, and modern IT infrastructure diagnostics. 

@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Network Tools | Ping Checker Pro 2 & IP Scanner Pro for Windows</title>
-    <meta name="description" content="Download professional Windows network tools: Ping Checker Pro 2 for 7-day ICMP latency monitoring & graph timeline scrubbing, and IP Scanner Pro for multi-threaded subnet device discovery & MAC vendor resolution.">
-    <meta name="keywords" content="Ping Checker Pro 2, IP Scanner Pro, network tools, IP scanner, subnet scanner, ICMP ping, packet loss monitor, MAC address lookup, vendor detection, IT diagnostics">
-    <meta name="author" content="Network Tools">
+    <title>Windows System & Network Tools | Ping Checker Pro 2, IP Scanner Pro & DataCopier Pro</title>
+    <meta name="description" content="Download professional, standalone Windows utilities: Ping Checker Pro 2 for 7-day ICMP latency monitoring, IP Scanner Pro for multi-threaded subnet discovery & MAC vendor lookup, and DataCopier Pro for high-speed resilient file copying & timestamp preservation.">
+    <meta name="keywords" content="Ping Checker Pro 2, IP Scanner Pro, DataCopier Pro, Windows network tools, system utilities, IP scanner, subnet scanner, ICMP ping, packet loss monitor, fast copy, unstoppable copier, file migration, timestamp preservation, IT tools">
+    <meta name="author" content="System & Network Tools">
     <link rel="icon" type="image/x-icon" href="./app_icon.ico">
-    <link rel="canonical" href="https://vip3r81.github.io/ping-checker-pro/">
+    <link rel="canonical" href="https://pingcheckerpro.com.au/">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Network Tools | Ping Checker Pro 2 & IP Scanner Pro">
-    <meta property="og:description" content="Two essential Windows utilities for network administrators: 7-day latency monitoring with Ping Checker Pro 2, and multi-threaded subnet discovery with IP Scanner Pro.">
+    <meta property="og:title" content="Windows System & Network Tools | Ping Checker Pro 2, IP Scanner Pro & DataCopier Pro">
+    <meta property="og:description" content="Three essential portable Windows utilities for IT administrators: 7-day latency tracking, multi-threaded subnet device discovery, and high-speed resilient file copying.">
     <meta property="og:image" content="./pingcheckerpro.png">
-    <meta property="og:url" content="https://vip3r81.github.io/ping-checker-pro/">
+    <meta property="og:url" content="https://pingcheckerpro.com.au/">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Network Tools | Free Windows Network Diagnostic Suite">
-    <meta name="twitter:description" content="Professional ICMP latency tracking and multi-threaded IP subnet discovery tools for Windows.">
+    <meta name="twitter:title" content="Windows System & Network Tools Suite">
+    <meta name="twitter:description" content="Professional ICMP latency tracking, multi-threaded IP subnet discovery, and resilient high-speed file migration tools for Windows.">
     <meta name="twitter:image" content="./pingcheckerpro.png">
 
-    <!-- Schema.org Structured Data for Multi-App Suite -->
+    <!-- Schema.org Structured Data for 3-App Suite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Windows Network Tools Suite",
+      "name": "Windows System & Network Tools Suite",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -58,6 +58,20 @@
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
             "downloadUrl": "https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe"
           }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "DataCopier Pro",
+            "operatingSystem": "Windows 10, Windows 11",
+            "applicationCategory": "UtilitiesApplication",
+            "softwareVersion": "1.0",
+            "description": "High-throughput resilient file copier featuring multi-threaded I/O, nanosecond timestamp preservation, unstoppable damaged sector recovery, and dry-run simulation.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "downloadUrl": "https://github.com/Vip3r81/ping-checker-pro/releases/download/DataCopierPro/DataCopierPro.exe"
+          }
         }
       ]
     }
@@ -73,6 +87,7 @@
             --accent-green: #10B981;
             --accent-amber: #F59E0B;
             --accent-purple: #8B5CF6;
+            --accent-emerald: #059669;
             --dark-bg: #0B0F19;
             --dark-card: #131B2E;
             --dark-card-border: rgba(255, 255, 255, 0.08);
@@ -97,14 +112,14 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(11, 15, 25, 0.85);
-            backdrop-filter: blur(12px);
+            background: rgba(11, 15, 25, 0.88);
+            backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--dark-card-border);
             padding: 16px 0;
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
             padding: 0 24px;
             display: flex;
@@ -137,7 +152,7 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 24px;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -146,7 +161,7 @@
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 500;
             transition: color 0.2s ease;
         }
@@ -156,14 +171,14 @@
         /* --- HERO SECTION --- */
         .hero-section {
             position: relative;
-            padding: 90px 24px 70px;
+            padding: 95px 24px 75px;
             text-align: center;
-            background: radial-gradient(circle at 50% 15%, rgba(0, 162, 255, 0.18) 0%, rgba(11, 15, 25, 1) 75%);
+            background: radial-gradient(circle at 50% 15%, rgba(0, 162, 255, 0.18) 0%, rgba(11, 15, 25, 1) 80%);
             border-bottom: 1px solid var(--dark-card-border);
         }
 
         .container {
-            max-width: 1150px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -200,7 +215,7 @@
         }
 
         h1 {
-            font-size: 3.6rem;
+            font-size: 3.5rem;
             font-weight: 800;
             margin: 0 0 18px;
             letter-spacing: -2px;
@@ -212,7 +227,7 @@
 
         .hero-subtext {
             color: var(--text-muted);
-            max-width: 780px;
+            max-width: 820px;
             margin: 0 auto 40px;
             font-size: 1.2rem;
             font-weight: 400;
@@ -227,44 +242,44 @@
             margin-bottom: 40px;
         }
 
-        .btn-primary {
+        .btn-tool {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
             color: white;
-            padding: 16px 32px;
-            font-size: 1.05rem;
+            padding: 15px 28px;
+            font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 12px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 25px rgba(0, 120, 212, 0.35);
         }
 
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+            box-shadow: 0 10px 25px rgba(0, 120, 212, 0.35);
+        }
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(0, 198, 255, 0.45);
         }
 
         .btn-purple {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
             background: linear-gradient(135deg, #7C3AED, #A855F7);
-            color: white;
-            padding: 16px 32px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: all 0.3s ease;
             box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
         }
-
         .btn-purple:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(168, 85, 247, 0.45);
+        }
+
+        .btn-emerald {
+            background: linear-gradient(135deg, #059669, #10B981);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+        }
+        .btn-emerald:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.45);
         }
 
         /* --- TOOL SHOWCASE SECTION --- */
@@ -290,6 +305,7 @@
 
         .badge-cyan { background: rgba(0, 198, 255, 0.15); color: var(--accent-cyan); border: 1px solid rgba(0, 198, 255, 0.3); }
         .badge-purple { background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .badge-green { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
 
         .tool-title {
             font-size: 2.4rem;
@@ -302,26 +318,26 @@
         .tool-desc {
             color: var(--text-muted);
             font-size: 1.1rem;
-            max-width: 750px;
+            max-width: 780px;
             margin-bottom: 40px;
         }
 
         .showcase-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1.25fr 1fr;
             gap: 40px;
             align-items: center;
         }
 
         .showcase-grid.reverse {
-            grid-template-columns: 1fr 1.2fr;
+            grid-template-columns: 1fr 1.25fr;
         }
 
         .window-frame {
             background: #1E293B;
             border-radius: 16px;
             border: 1px solid var(--dark-card-border);
-            box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 120, 212, 0.15);
+            box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 120, 212, 0.12);
             overflow: hidden;
         }
 
@@ -353,26 +369,10 @@
             display: block;
         }
 
-        .icon-box-display {
-            background: var(--dark-card);
-            border-radius: 20px;
-            padding: 50px 30px;
-            text-align: center;
-            border: 1px solid var(--dark-card-border);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-        }
-
-        .icon-box-display img {
-            width: 180px;
-            height: 180px;
-            object-fit: contain;
-            filter: drop-shadow(0 15px 25px rgba(124, 58, 237, 0.4));
-        }
-
         .feature-bullets {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
         }
 
         .bullet-item {
@@ -406,47 +406,54 @@
 
         /* --- WORKFLOW INTEGRATION --- */
         .workflow-section {
-            padding: 90px 0;
+            padding: 95px 0;
             background: #0B0F19;
             text-align: center;
         }
 
         .workflow-grid {
             display: grid;
-            grid-template-columns: 1fr 60px 1fr;
-            gap: 20px;
+            grid-template-columns: 1fr 40px 1fr 40px 1fr;
+            gap: 16px;
             align-items: center;
             margin-top: 50px;
         }
 
         .workflow-card {
             background: var(--dark-card);
-            padding: 36px;
-            border-radius: 20px;
+            padding: 32px 26px;
+            border-radius: 18px;
             border: 1px solid var(--dark-card-border);
             text-align: left;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .step-number {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             color: var(--accent-cyan);
             background: rgba(0, 198, 255, 0.15);
             padding: 4px 10px;
             border-radius: 6px;
             display: inline-block;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
+            align-self: flex-start;
         }
 
         .arrow-divider {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* --- COMPARISON TABLE --- */
         .comparison-section {
-            padding: 80px 0;
+            padding: 85px 0;
             background: #0F172A;
             border-top: 1px solid var(--dark-card-border);
         }
@@ -466,9 +473,9 @@
         }
 
         th, td {
-            padding: 18px 24px;
+            padding: 16px 22px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
         }
 
         th {
@@ -482,32 +489,38 @@
 
         /* --- DOWNLOAD CENTER & ADMIN ALERT --- */
         .download-center {
-            padding: 90px 0;
+            padding: 95px 0;
             background: #0B0F19;
             text-align: center;
         }
 
         .download-cards {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
             margin-top: 40px;
         }
 
         .download-card {
             background: var(--dark-card);
-            padding: 40px;
+            padding: 36px 28px;
             border-radius: 20px;
             border: 1px solid var(--dark-card-border);
             display: flex;
             flex-direction: column;
             align-items: center;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .download-card:hover {
             transform: translateY(-6px);
             border-color: rgba(0, 162, 255, 0.4);
+        }
+
+        .download-card-icon {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
         }
 
         .security-alert {
@@ -537,12 +550,13 @@
         footer a { color: var(--accent-cyan); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
 
-        @media (max-width: 900px) {
+        @media (max-width: 990px) {
             .showcase-grid, .showcase-grid.reverse { grid-template-columns: 1fr; }
-            .workflow-grid { grid-template-columns: 1fr; }
-            .arrow-divider { transform: rotate(90deg); margin: 10px 0; }
+            .workflow-grid { grid-template-columns: 1fr; gap: 20px; }
+            .arrow-divider { transform: rotate(90deg); margin: 6px 0; }
             .download-cards { grid-template-columns: 1fr; }
             h1 { font-size: 2.6rem; }
+            .table-wrapper { overflow-x: auto; }
         }
     </style>
 </head>
@@ -553,11 +567,12 @@
     <div class="nav-container">
         <a href="#" class="brand-logo">
             <div class="brand-icon">⚡</div>
-            Network Tools
+            System & Network Tools
         </a>
         <ul class="nav-links">
             <li><a href="#ping-checker">Ping Checker Pro 2</a></li>
             <li><a href="#ip-scanner">IP Scanner Pro</a></li>
+            <li><a href="#data-copier">DataCopier Pro</a></li>
             <li><a href="#workflow">Workflow</a></li>
             <li><a href="#comparison">Specs</a></li>
             <li><a href="#download" style="color: var(--accent-cyan); font-weight: 700;">Download</a></li>
@@ -570,21 +585,25 @@
     <div class="container">
         <div class="badge-pill">
             <span class="badge-pulse"></span>
-            Network Utilities Suite • Version 2.0
+            Windows IT Utilities Suite • 2026 Edition
         </div>
-        <h1>Windows Network Diagnostics & Discovery Tools</h1>
+        <h1>Essential Windows Tools for Diagnostics, Discovery & Migration</h1>
         <p class="hero-subtext">
-            Two standalone, high-performance Windows applications designed for system administrators, IT specialists, and network engineers. Monitor latency stability with <strong>Ping Checker Pro 2</strong> and discover local subnet infrastructure with <strong>IP Scanner Pro</strong>.
+            Three standalone, ultra-fast Windows applications engineered for IT engineers, system administrators, and power users. Monitor latency with <strong>Ping Checker Pro 2</strong>, discover network infrastructure with <strong>IP Scanner Pro</strong>, and migrate high-throughput datasets with <strong>DataCopier Pro</strong>.
         </p>
 
         <div class="cta-group">
-            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/PingCheckerPro2/PingCheckerPro2.exe" class="btn-primary">
+            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/PingCheckerPro2/PingCheckerPro2.exe" class="btn-tool btn-primary">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download Ping Checker Pro 2
+                Ping Checker Pro 2
             </a>
-            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe" class="btn-purple">
+            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe" class="btn-tool btn-purple">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download IP Scanner Pro
+                IP Scanner Pro
+            </a>
+            <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/DataCopierPro/DataCopierPro.exe" class="btn-tool btn-emerald">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                DataCopier Pro
             </a>
         </div>
     </div>
@@ -685,8 +704,8 @@
                 <div class="bullet-item">
                     <div class="bullet-icon">📋</div>
                     <div>
-                        <div class="bullet-title">Quick Actions & Exporting</div>
-                        <p class="bullet-text">Launch 1-click web connections, SSH sessions, or RDP directly from discovered IP rows. Export complete inventory tables to CSV or JSON.</p>
+                        <div class="bullet-title">Host Inspector & Reporting</div>
+                        <p class="bullet-text">Dedicated Host Inspector pane with quick remote shortcuts (HTTP, HTTPS, RDP, WOL, Deep Scan) and instant CSV/JSON/HTML report exports.</p>
                     </div>
                 </div>
             </div>
@@ -704,20 +723,77 @@
     </div>
 </section>
 
+<!-- TOOL 3: DATACOPIER PRO -->
+<section id="data-copier" class="tool-showcase">
+    <div class="container">
+        <span class="tool-header-badge badge-green">Tool 3 • Fast & Resilient File Copier</span>
+        <h2 class="tool-title">DataCopier Pro</h2>
+        <p class="tool-desc">
+            High-speed Windows data migration and synchronization engine combining raw FastCopy multi-threaded throughput with Roadkil's Unstoppable Copier fault-tolerant sector recovery.
+        </p>
+
+        <div class="showcase-grid">
+            <div class="window-frame">
+                <div class="window-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <span class="window-title">DataCopier Pro - [Fast & Resilient Engine]</span>
+                </div>
+                <img src="./datacopierpro.png" alt="DataCopier Pro interface displaying speed metrics, sync modes, and progress meters" class="screenshot-img">
+            </div>
+
+            <div class="feature-bullets">
+                <div class="bullet-item">
+                    <div class="bullet-icon">🚀</div>
+                    <div>
+                        <div class="bullet-title">Ultra-Fast Multi-Threaded I/O</div>
+                        <p class="bullet-text">Configurable 1 MB to 16 MB chunked zero-GC memory streaming with up to 16 parallel worker threads to saturate NVMe, SSD, and gigabit NAS storage.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">🕒</div>
+                    <div>
+                        <div class="bullet-title">100-Nanosecond Timestamp Fidelity</div>
+                        <p class="bullet-text">Preserves exact Creation, Last Modified, and Last Access timestamps using Windows <code>kernel32.SetFileTime</code>, with deepest-first folder timestamp fixups.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">🛡️</div>
+                    <div>
+                        <div class="bullet-title">Unstoppable Damaged Sector Rescue</div>
+                        <p class="bullet-text">Gracefully recovers data from failing drives or bad sectors by switching to 4 KB sector reads and zero-fill padding readable fragments without aborting.</p>
+                    </div>
+                </div>
+
+                <div class="bullet-item">
+                    <div class="bullet-icon">🔄</div>
+                    <div>
+                        <div class="bullet-title">Sync Mirroring, Dry-Run & Safe Deletes</div>
+                        <p class="bullet-text">Supports Diff (newer only), Sync/Mirror, and Full Overwrite. Obsolete sync deletions route safely to the Windows Recycle Bin, with full Dry-Run simulation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- WORKFLOW INTEGRATION -->
 <section id="workflow" class="workflow-section">
     <div class="container">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: white; margin: 0 0 12px;">Better Together: Integrated IT Workflow</h2>
-        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px;">
-            Combine both tools for complete network discovery, baseline auditing, and continuous quality monitoring.
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: white; margin: 0 0 12px;">Complete IT Lifecycle Workflow</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 760px; margin: 0 auto 40px;">
+            Harness all three specialized utilities together for full discovery, ongoing quality assurance, and high-performance data migration.
         </p>
 
         <div class="workflow-grid">
             <div class="workflow-card">
                 <span class="step-number">STEP 1 • DISCOVER</span>
-                <h3 style="color: white; margin: 0 0 10px; font-size: 1.3rem;">Scan Subnet with IP Scanner Pro</h3>
+                <h3 style="color: white; margin: 0 0 10px; font-size: 1.25rem;">IP Scanner Pro</h3>
                 <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;">
-                    Run a quick subnet scan to discover all online devices, identify rogue IPs, query MAC vendors, and uncover open management ports.
+                    Sweep local subnets to audit connected workstations, IoT hardware, NAS servers, access points, and open management ports.
                 </p>
             </div>
 
@@ -725,9 +801,19 @@
 
             <div class="workflow-card">
                 <span class="step-number">STEP 2 • MONITOR</span>
-                <h3 style="color: white; margin: 0 0 10px; font-size: 1.3rem;">Track Quality with Ping Checker Pro 2</h3>
+                <h3 style="color: white; margin: 0 0 10px; font-size: 1.25rem;">Ping Checker Pro 2</h3>
                 <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;">
-                    Add critical infrastructure IPs (routers, access points, gateways, servers) to Ping Checker Pro 2 for continuous 7-day latency tracking and drop alerts.
+                    Pinpoint packet drops, ISP jitter, and gateway timeouts by tracking target hosts with 7-day memory graphs and pause scrubbing.
+                </p>
+            </div>
+
+            <div class="arrow-divider">➔</div>
+
+            <div class="workflow-card">
+                <span class="step-number">STEP 3 • MIGRATE</span>
+                <h3 style="color: white; margin: 0 0 10px; font-size: 1.25rem;">DataCopier Pro</h3>
+                <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;">
+                    Perform lightning-fast backups and file transfers between drives or network shares with total timestamp fidelity and sector rescue.
                 </p>
             </div>
         </div>
@@ -737,60 +823,63 @@
 <!-- COMPARISON MATRIX -->
 <section id="comparison" class="comparison-section">
     <div class="container">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: white; margin: 0 0 12px; text-align: center;">Tool Specifications Matrix</h2>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: white; margin: 0 0 12px; text-align: center;">Tools Specifications Matrix</h2>
         <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 20px; text-align: center;">
-            Compare technical capabilities and core features across both diagnostic tools.
+            Compare core technical capabilities across all three standalone utilities.
         </p>
 
         <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
-                        <th>Capability / Feature</th>
+                        <th>Capability / Metric</th>
                         <th>Ping Checker Pro 2</th>
                         <th>IP Scanner Pro</th>
+                        <th>DataCopier Pro</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Primary Function</strong></td>
-                        <td>Continuous ICMP Latency & Drop Monitoring</td>
-                        <td>Multi-Threaded Subnet & Device Discovery</td>
+                        <td><strong>Core Function</strong></td>
+                        <td>ICMP Latency & Drop Monitoring</td>
+                        <td>Subnet & Device Discovery</td>
+                        <td>High-Throughput File Copy & Sync</td>
                     </tr>
                     <tr>
-                        <td><strong>Target Capacity</strong></td>
-                        <td>Up to 10 Hosts (Parallel Graphing)</td>
-                        <td>Full Subnets (e.g. /24, 254+ IPs)</td>
+                        <td><strong>Primary Protocol / API</strong></td>
+                        <td>Raw ICMP Sockets</td>
+                        <td>Win32 SendARP & TCP Sockets</td>
+                        <td>Win32 SetFileTime & FileStream I/O</td>
                     </tr>
                     <tr>
-                        <td><strong>Timeline History</strong></td>
-                        <td>7 Days (604,800 Points In-Memory)</td>
-                        <td>Snapshot Scan Results Table</td>
+                        <td><strong>Concurrency</strong></td>
+                        <td>Up to 10 Target Hosts</td>
+                        <td>Multi-Threaded Subnet Scan Pool</td>
+                        <td>1 to 16 Parallel Worker Threads</td>
                     </tr>
                     <tr>
-                        <td><strong>Hardware Vendor Lookup</strong></td>
-                        <td>N/A</td>
-                        <td>Win32 SendARP + IEEE OUI Vendor Database</td>
+                        <td><strong>Special Capabilities</strong></td>
+                        <td>7-Day Scrubbing, MTU 1472B, Keyboard Scrub</td>
+                        <td>IEEE OUI Vendor Lookup, Port Scan</td>
+                        <td>Unstoppable Bad Sector Rescue, Dry-Run</td>
                     </tr>
                     <tr>
-                        <td><strong>Port Scanning</strong></td>
-                        <td>N/A</td>
-                        <td>Common Ports (HTTP, HTTPS, SSH, SMB, RDP, VNC)</td>
+                        <td><strong>Data Preservation</strong></td>
+                        <td>Sliding-Window Memory Cap</td>
+                        <td>Live Table & Column Filtering</td>
+                        <td>100ns File & Folder Timestamps + Attributes</td>
                     </tr>
                     <tr>
-                        <td><strong>Controls & Scrubbing</strong></td>
-                        <td>Full-Width Slider, Left/Right Arrow Keys</td>
-                        <td>Filter Search Bar, Column Sorting</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Export Formats</strong></td>
-                        <td>Text Audit Log (<code>ping_log.txt</code>)</td>
+                        <td><strong>Reporting & Output</strong></td>
+                        <td>Timestamped Text Audit (<code>ping_log.txt</code>)</td>
                         <td>CSV, JSON, HTML Reports</td>
+                        <td>Event Logs & Missed Files CSV Export</td>
                     </tr>
                     <tr>
-                        <td><strong>Executable Bundle</strong></td>
-                        <td>Standalone Windows <code>.exe</code></td>
-                        <td>Standalone Windows <code>.exe</code></td>
+                        <td><strong>Portability</strong></td>
+                        <td>Single <code>.exe</code> (Zero Install)</td>
+                        <td>Single <code>.exe</code> (Zero Install)</td>
+                        <td>Single <code>.exe</code> (Zero Install)</td>
                     </tr>
                 </tbody>
             </table>
@@ -803,25 +892,34 @@
     <div class="container">
         <h2 style="font-size: 2.4rem; font-weight: 800; color: white; margin: 0 0 12px;">Download Center</h2>
         <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
-            Get the latest stable 2.0 standalone executables for Windows 10 and Windows 11.
+            Download the latest standalone portable executables for Windows 10 and Windows 11.
         </p>
 
         <div class="download-cards">
             <div class="download-card">
-                <div style="font-size: 2.5rem; margin-bottom: 12px;">⚡</div>
-                <h3 style="color: white; font-size: 1.5rem; margin: 0 0 8px;">Ping Checker Pro 2</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Version 2.0.0 • Latency Monitoring</p>
-                <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/PingCheckerPro2/PingCheckerPro2.exe" class="btn-primary" style="width: 100%; justify-content: center;">
+                <div class="download-card-icon">⚡</div>
+                <h3 style="color: white; font-size: 1.4rem; margin: 0 0 8px;">Ping Checker Pro 2</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">v2.0 • Real-Time Latency Monitoring</p>
+                <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/PingCheckerPro2/PingCheckerPro2.exe" class="btn-tool btn-primary" style="width: 100%; justify-content: center;">
                     Download PingCheckerPro2.exe
                 </a>
             </div>
 
             <div class="download-card">
-                <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
-                <h3 style="color: white; font-size: 1.5rem; margin: 0 0 8px;">IP Scanner Pro</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Version 1.0.0 • Subnet Discovery</p>
-                <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe" class="btn-purple" style="width: 100%; justify-content: center;">
+                <div class="download-card-icon">🔍</div>
+                <h3 style="color: white; font-size: 1.4rem; margin: 0 0 8px;">IP Scanner Pro</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">v1.0 • Subnet & Device Discovery</p>
+                <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/IPScanner/IPScanner.exe" class="btn-tool btn-purple" style="width: 100%; justify-content: center;">
                     Download IPScanner.exe
+                </a>
+            </div>
+
+            <div class="download-card">
+                <div class="download-card-icon">🚀</div>
+                <h3 style="color: white; font-size: 1.4rem; margin: 0 0 8px;">DataCopier Pro</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">v1.0 • High-Speed Resilient File Copier</p>
+                <a href="https://github.com/Vip3r81/ping-checker-pro/releases/download/DataCopierPro/DataCopierPro.exe" class="btn-tool btn-emerald" style="width: 100%; justify-content: center;">
+                    Download DataCopierPro.exe
                 </a>
             </div>
         </div>
@@ -830,7 +928,7 @@
             <span style="font-size: 1.5rem;">🛡️</span>
             <div>
                 <strong>Administrator Privilege Notice:</strong><br>
-                Both applications require Elevated Privileges to send raw ICMP socket packets and issue Win32 SendARP queries. Please right-click the executable files and select <strong>"Run as Administrator"</strong> for full functionality.
+                For full low-level hardware capabilities (raw ICMP sockets, Win32 SendARP subnet queries, and 100ns timestamp/attribute system file overrides), please right-click the executable files and select <strong>"Run as Administrator"</strong>.
             </div>
         </div>
     </div>
@@ -840,10 +938,10 @@
 <footer>
     <div class="container">
         <p style="margin-bottom: 8px;">
-            &copy; 2026 <strong>Network Tools</strong>. Stable Release Suite 2.0.
+            &copy; 2026 <strong>System & Network Tools</strong>. Stable Release Suite 2.0.
         </p>
         <p style="margin: 0; font-size: 0.85rem;">
-            Designed for stability, precision, and modern IT infrastructure diagnostics. 
+            Designed for stability, precision, and modern IT infrastructure engineering. 
             | <a href="https://github.com/Vip3r81/ping-checker-pro" target="_blank" rel="noopener">GitHub Project Repository</a>
         </p>
     </div>
